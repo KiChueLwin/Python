@@ -1,6 +1,11 @@
 class car:
-  pass  
+   def __init__(self, color, brand, price, doors):
+      self.color = color #red
+      self.brand = brand
+      self.price = price
+      self.doors = doors
 
-obj = car()
+obj = car("red","bmw","12000",6)   # add value to above parameters
+
  
-print(obj)
+print(obj.brand)
