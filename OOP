@@ -9,3 +9,37 @@ obj = car("red","bmw","12000",6)   # add value to above parameters
 
  
 print(obj.brand)
+
+
+#instance method = work with instance variable (keyword is self)
+#satic method = dont work with others
+#class method = work with class variable
+
+
+class student:
+   uni = "KMD"
+   def __init__(self, name, year, age):
+      self.name = name
+      self.year = year
+      self.age = age
+
+      #static method
+      def set_age(self,age):
+         if age >= 15:
+            self.age = age
+         else:
+            print("Invalid Age")
+      
+student_one = student("Aung","2023",23)
+student_two = student("Bo","2023",24)
+
+student.uni = "MIT"  # changing or overwriting uni value
+
+print(student_one.uni)
+print(student_two.uni)  
+#can call class value from object of its class
+
+student_one.set_age(2)
+print(student_one.set_age)
+
+
