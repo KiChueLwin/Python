@@ -43,3 +43,43 @@ student_one.set_age(2)
 print(student_one.set_age)
 
 
+
+class person:
+   def __init__(self, name,age,id):
+      self.__name = name 
+      self.__age = age 
+      self.__id = id       # __ means the private 
+
+   def get_name(self):  # this is public interface
+      return self.__name
+   
+   def get_id(self):
+      return self.__id
+
+   def get_age(self):
+      return self.__age
+
+   def set_age(self,age):   #dont forget the parameter in the setter method.
+      #self.__age = age
+      if age > 70 or age <= 0:
+         print("Your age is Invalid!")
+      else:
+         self.__age = age
+      
+
+first = person("Ki",21,1211)
+name = first.get_name()
+print(name)
+
+first_id = first.get_id()
+print(first_id)
+
+age = first.get_age()
+print(age)
+
+first.set_age(100)
+age = first.get_age()
+print(age)
+
+
+
