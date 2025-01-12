@@ -83,3 +83,46 @@ print(age)
 
 
 
+# specail methods
+#__init__
+#__str__   use when you want to cut the specific parts in printing
+#__len__   use when you want to find length for object
+#__dir__  use to abstract the attributes which can be used behind the object
+#__eq__  use when you want to test the condition(equal or not)for objects(checking their values in them not address)
+
+class book:
+   def __init__(self,name,pages,year):
+      self.name = name
+      self.pages = pages
+      self.year = year
+
+   def __str__(self):  #__str__   use when you want to cut the specific parts in printing
+      return f"The book 1 : {self.name}"
+
+   def __len__(self):   #__len__   use when you want to find length for object
+      return self.pages
+
+   def __eq__(self,others):  # need to add second variable to receive the value
+      if self.name == others.name and self.year == others.year:
+         return True
+      else:
+         return False
+
+   # creating a method
+   def display_info(self):
+      print(f"{self.name}{self.pages}{self.year}")
+
+book1 = book("All trust in God",200,1998)
+book2 = book("All trust in God",450,1998)
+print(book1)
+print(len(book1))
+
+# creating a variable for getting avlue for dir
+value_from_dir = book1. __dir__()
+print(type(value_from_dir))
+print(value_from_dir)
+
+print(id(book1))
+print(id(book2))
+
+print(book1 == book2)
