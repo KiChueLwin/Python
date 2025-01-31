@@ -83,6 +83,14 @@ print(books_history["Chit Oo Nyo"])
 books_history["Chit Oo Nyo"] = {"unread_book" : "Java"}
 print(books_history["Chit Oo Nyo"])
 
+books_history = {"Chit Oo Nyo": {"read_book": "Data Science"}}
+
+# Update instead of overwrite
+books_history["Chit Oo Nyo"].update({"unread_book": "Java"})
+
+print(books_history["Chit Oo Nyo"])
+
+
 # adding 
 books_history ["U naing"] = {"read_book" : "Script writing "}
 print(books_history)
