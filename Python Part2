@@ -2,11 +2,23 @@
 students_marks = 200, 560, 435 # without brackets # order structure # Tuple is imutable as they cannot substitute value like list
 print(type(students_marks))
 
+
 # Tuple unpacking 
 studentone_mark, studenttwo_mark, studentthree_mark = students_marks
 print(f"Student one's mark is {studentone_mark}")
 print(f"Student two's mark is {studenttwo_mark}")
 print(f"Student three's mark is {studentthree_mark}")
+
+# Packing
+person = ("Ki", 21, "Cloud Engineer")
+
+# Unpacking
+name, age, job = person
+
+print(name)  # Output: Ki
+print(age)   # Output: 21
+print(job)   # Output: Cloud Engineer
+
 
 
 #immutable but it ca create new tuple with previous ones
