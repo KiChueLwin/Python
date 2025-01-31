@@ -10,6 +10,9 @@ print(my_set)      # useful when you want to know types of data
 empty_set = {} # cannot write like this (change to dict)
 print(type(empty_set))
 
+# Duplicates are automatically removed
+numbers = {1, 2, 2, 3, 4, 4, 5}
+print(numbers)  # Output: {1, 2, 3, 4, 5}
 
 
 # adding
